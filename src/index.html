@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Folder Stats</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/@woodwing/assets-client-sdk"></script>
+    <!-- <script src="https://unpkg.com/@woodwing/assets-client-sdk"></script> -->
+    <!-- <script src="../../bundled/assets-client-sdk.min.js"></script> -->
+    <link href="resources/style.css" rel="stylesheet" type="text/css" defer />
+    <script src="resources/script.js"></script>
+</head>
+
+<body onload="init()">
+
+    <p>Folder Stats</p>
+
+    <div id="info">
+        <h1>Error 401</h1>
+        <h1>Unauthorized</h1>
+    </div>
+    <div id="stat" style="display: none">
+
+        <div id="indicator">
+            <img src="resources/cupertino_activity_indicator_medium.gif">
+        </div>
+
+        <div class="tab">
+            <button class="tabLinks" onclick="openTab(event, 'usage')" id="defaultOpen">Storage</button>
+            <button class="tabLinks" onclick="openTab(event, 'view')">Most View</button>
+            <button class="tabLinks" onclick="openTab(event, 'download')">Download</button>
+            <button class="tabLinks" onclick="openTab(event, 'size')">Large Files</button>
+            <button class="tabLinks" onclick="openTab(event, 'linked')">In Used</button>
+        </div>
+
+        <div id="usage" class="tabContent">
+            <h3>Storage Usage</h3>
+            <p id="reportUsage"></p>
+        </div>
+
+        <div id="view" class="tabContent">
+            <h3>Most View</h3>
+            <p id="reportView"></p>
+        </div>
+
+        <div id="download" class="tabContent">
+            <h3>Most Download</h3>
+            <p id="reportDownload"></p>
+        </div>
+
+        <div id="size" class="tabContent">
+            <h3>Larger Files</h3>
+            <p id="reportSize"></p>
+        </div>
+
+        <div id="linked" class="tabContent">
+            <h3>Linked</h3>
+            <p id="reportLink"></p>
+        </div>
+    </div>
+    <div id="sig" class="sig"><img src="./icon24.png" /></div>
+</body>
+
+</html>
